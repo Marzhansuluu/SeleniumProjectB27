@@ -1,4 +1,4 @@
-package com.cydeo.tests.day2_selenium_elements.practice;
+package com.cydeo.tests.day2_locators_getText_getAttribute.practice;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -19,7 +19,7 @@ public class LocateElementByName {
         //identify and save the search box element
         WebElement searchBox = driver.findElement(By.name("q"));
 
-        
+
     }
 
 }

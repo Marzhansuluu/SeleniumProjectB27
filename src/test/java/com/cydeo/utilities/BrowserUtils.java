@@ -1,9 +1,14 @@
 package com.cydeo.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class BrowserUtil {
+import java.util.concurrent.TimeUnit;
+
+public class BrowserUtils {
     //Methods are static. Because we do not want to create an object to call those methods.
     // We just want to call those methods with class name. That is why they are static type
 
@@ -38,5 +43,11 @@ public class BrowserUtil {
 
         Assert.assertEquals(actualTitle,expectedTitle);
 
+    }
+
+    public static void waitForInvisibilityOf(WebElement webElement){
+        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 }

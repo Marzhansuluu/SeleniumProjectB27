@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BackAndForth {
+public class T2_LinkTextPractice {
     public static void main(String[] args) throws InterruptedException {
         // 1- Open a chrome browser
         WebDriverManager.chromedriver().setup();
@@ -19,44 +19,35 @@ public class BackAndForth {
 
         Thread.sleep(3000);
 
-
         //3- Click to A/B Testing from top of the list.
-        //driver.findElement(By.linkTest("A/B Testing"))
+        //driver.findElement(By.linkText("A/B Testing")).click();
         WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
 
-        //4- Verify title is:Expected: No A/B Test
+        //4- Verify title is: Expected: No A/B Test
         String expectedTitle = "No A/B Test";
         String actualTitle = driver.getTitle();
 
         if(actualTitle.equals(expectedTitle)){
-            System.out.println("No A/B Test title verification is PASSED");
+            System.out.println("No A/B test title verification passed!");
         }else{
-            System.out.println("No A/B Test title verification is PASSED");
+            System.out.println("No A/B test title verification failed!");
         }
 
         Thread.sleep(3000);
         //5- Go back to home page by using the .back();
         driver.navigate().back();
 
-
         //6- Verify title equals: Expected: Practice
         expectedTitle = "Practice";
         actualTitle = driver.getTitle();
 
         if(actualTitle.equals(expectedTitle)){
-            System.out.println("Practice page title verification passed");
+            System.out.println("Practice page title verification passed!");
+        }else{
+            System.out.println("Practice page title verification failed!");
         }
-        else{
-            System.out.println("Practice page title verification failed");
-        }
-
-        
-
-
-
 
         driver.quit();
-
     }
 }

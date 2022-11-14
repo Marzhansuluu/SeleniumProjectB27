@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T4_ {
+public class T4_getText_cssSelector_2 {
     public static void main(String[] args) {
         //1- Open a chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");

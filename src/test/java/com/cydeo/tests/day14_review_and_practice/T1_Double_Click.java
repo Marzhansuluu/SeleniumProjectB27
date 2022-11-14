@@ -1,4 +1,4 @@
-package com.cydeo.tests.day15_review_and_practice;
+package com.cydeo.tests.day14_review_and_practice;
 
 import com.cydeo.pages.DoubleClickPage;
 import com.cydeo.utilities.Driver;

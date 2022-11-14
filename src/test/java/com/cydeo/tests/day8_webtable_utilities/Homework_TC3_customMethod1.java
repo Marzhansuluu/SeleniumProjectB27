@@ -1,18 +1,27 @@
 package com.cydeo.tests.day8_webtable_utilities;
 
-public class Homework_customMethod2 {
-//    TC #4: Create utility method
+import com.cydeo.tests.base.TestBase;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Homework_TC3_customMethod1 extends TestBase {
+//TC #3: Create a custom method
+//1- Open a chrome browser
+
+
+//    @Test
+//    public void
+//2- Go to: https://practice.cydeo.com/tables
+//3- Write custom method:
 //
-//1. Create a new class called BrowserUtils
-//2. Create a method for title verification
-//3. Create a method to make title verification logic re-usable    4.
-//When method is called, it should simply verify expected title
-//with actual title.
-//
-//
-//Method info:
-//• Name: verifyTitle()
+//• Method name: getTableGetEmail()
 //• Return type: void
-//• Arg1: WebDriver
-//• Arg2: String expectedTitle
+//• Arg1: WebDriver driver
+//• Arg2: String tableNum
+//• Arg3: String firstName
+
+    public static void getTableGetEmail(WebDriver driver,String tableNum, String firstName){
+        WebElement email = driver.findElement(By.xpath(""));
+    }
 }
